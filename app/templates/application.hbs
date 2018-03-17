@@ -1,5 +1,8 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{username-form user=model}}
 
 {{outlet}}
+
+
+{{#each model.data as |data|}}
+  <a href={{data.pull_request.html_url}}>{{data.title}}</a> {{data.number}}
+{{/each}}
