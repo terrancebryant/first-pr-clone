@@ -1,0 +1,18 @@
+{{yield}}
+
+
+{{#each pr as |data|}}
+  <div class="card">
+    <h2>
+      <a href={{data.pull_request.html_url}}>{{data.title}}</a>
+      <span>#{{data.number}}</span>
+      <br>
+      <small>to</small>
+    </h2>
+    <div class="user-data">
+      <a href="#">
+        <img src={{data.user.avatar_url}} width="48" height="48" alt="">
+      </a>
+    </div>
+  </div>
+{{/each}} 

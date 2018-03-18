@@ -1,8 +1,16 @@
-{{username-form user=model}}
+<div class="wrapper">
+  
+  {{username-form user=model}}
 
-{{outlet}}
+  <div class="left">
+    {{#if model.firt_pull_request}}
+      {{pr-card pr=model.firt_pull_request}}
+    {{/if}}
+  </div>
 
-
-{{#each model.data as |data|}}
-  <a href={{data.pull_request.html_url}}>{{data.title}}</a> {{data.number}}
-{{/each}}
+  {{!-- <div class="right">
+    {{pr-card pr=model.firt_pull_request}}
+  </div> --}}
+  
+  {{outlet}}
+</div>

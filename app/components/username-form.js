@@ -15,7 +15,7 @@ export default Component.extend({
     let github = get(this, 'github');
     let username = get(this, 'user.username');
     github.loadData(username).then((x) => {
-      set(this, 'user.data', x.items)
+      set(this, 'user.firt_pull_request', x.items)
     })
   }
 });
